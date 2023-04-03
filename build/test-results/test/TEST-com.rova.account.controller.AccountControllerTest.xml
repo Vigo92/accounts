@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.rova.account.controller.AccountControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-04-03T11:11:31" hostname="Macbooks-MacBook-Pro.local" time="0.493">
+  <properties/>
+  <testcase name="createCurrentAccount()" classname="com.rova.account.controller.AccountControllerTest" time="0.493"/>
+  <system-out><![CDATA[12:11:25.760 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Neither @ContextConfiguration nor @ContextHierarchy found for test class [AccountControllerTest]: using SpringBootContextLoader
+12:11:25.766 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader -- Could not detect default resource locations for test class [com.rova.account.controller.AccountControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+12:11:25.767 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.rova.account.controller.AccountControllerTest]: AccountControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+12:11:25.797 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Using ContextCustomizers for test class [AccountControllerTest]: [DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer, MockServerContainerContextCustomizer]
+12:11:25.898 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider -- Identified candidate component class: file [/Users/macbookpro/Desktop/springboot/accounts/build/classes/java/main/com/rova/account/AccountsApplication.class]
+12:11:25.900 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.rova.account.AccountsApplication for test class com.rova.account.controller.AccountControllerTest
+12:11:26.025 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Using TestExecutionListeners for test class [AccountControllerTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.5)
+
+2023-04-03T12:11:26.346+01:00  INFO 44370 --- [    Test worker] c.r.a.controller.AccountControllerTest   : Starting AccountControllerTest using Java 17.0.6 with PID 44370 (started by macbookpro in /Users/macbookpro/Desktop/springboot/accounts)
+2023-04-03T12:11:26.348+01:00  INFO 44370 --- [    Test worker] c.r.a.controller.AccountControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2023-04-03T12:11:27.505+01:00  INFO 44370 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-03T12:11:27.579+01:00  INFO 44370 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 3 JPA repository interfaces.
+2023-04-03T12:11:28.024+01:00  INFO 44370 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-03T12:11:28.222+01:00  INFO 44370 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:mydb user=SA
+2023-04-03T12:11:28.224+01:00  INFO 44370 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-03T12:11:28.269+01:00  INFO 44370 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-03T12:11:28.319+01:00  INFO 44370 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-03T12:11:28.638+01:00  INFO 44370 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-04-03T12:11:29.610+01:00  INFO 44370 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-03T12:11:29.623+01:00  INFO 44370 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-03T12:11:30.212+01:00  WARN 44370 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-03T12:11:31.728+01:00  INFO 44370 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:mydb'
+2023-04-03T12:11:31.771+01:00  INFO 44370 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-04-03T12:11:31.847+01:00  INFO 44370 --- [    Test worker] c.r.a.controller.AccountControllerTest   : Started AccountControllerTest in 5.79 seconds (process running for 7.055)
+2023-04-03T12:11:31.921+01:00  INFO 44370 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-04-03T12:11:31.921+01:00  INFO 44370 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-04-03T12:11:31.925+01:00  INFO 44370 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2023-04-03T12:11:32.290+01:00  INFO 44370 --- [    Test worker] c.r.a.service.impl.AccountServiceImpl    : <<<<<<<<<< Create account request : CreateCurrentAccountRequest[customerId=1, initialCredit=10]
+2023-04-03T12:11:32.373+01:00  INFO 44370 --- [    Test worker] c.r.a.service.impl.AccountServiceImpl    : <<<<<<<<<< Create account response : CreateCurrentAccountResponse(message=Account created succesfully, responseCode=00, accountNumber=3334029761)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

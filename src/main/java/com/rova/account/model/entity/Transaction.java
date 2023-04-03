@@ -3,11 +3,8 @@ package com.rova.account.model.entity;
 import com.rova.account.model.constants.TransactionType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 import lombok.*;
-
 import java.math.BigDecimal;
-import java.util.List;
 
 /**
  * @author :  Ugochukwu Vigo Obia
@@ -23,8 +20,6 @@ import java.util.List;
 @Getter
 @Builder
 public class Transaction extends BaseEntity {
-
-
     private BigDecimal amount;
     private TransactionType transactionType;
     @ManyToOne
