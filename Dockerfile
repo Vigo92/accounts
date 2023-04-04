@@ -1,0 +1,4 @@
+FROM openjdk:17
+MAINTAINER Ugochukwu Vigo Obia
+COPY build/libs/accounts-0.0.1-SNAPSHOT.jar accounts-0.0.1-SNAPSHOT.jar
+ENTRYPOINT ["java","-jar","accounts-0.0.1-SNAPSHOT.jar"]

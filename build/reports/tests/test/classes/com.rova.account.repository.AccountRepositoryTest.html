@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.142s</div>
+<div class="counter">0.113s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,22 +79,22 @@
 </thead>
 <tr>
 <td class="success">testDeleteById()</td>
-<td class="success">0.020s</td>
+<td class="success">0.014s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testFindAll()</td>
-<td class="success">0.102s</td>
+<td class="success">0.084s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testFindById()</td>
-<td class="success">0.010s</td>
+<td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testSaveAccount()</td>
-<td class="success">0.010s</td>
+<td class="success">0.009s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -102,8 +102,8 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2023-04-03T12:11:32.498+01:00  INFO 44370 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.rova.account.repository.AccountRepositoryTest]: AccountRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2023-04-03T12:11:32.510+01:00  INFO 44370 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.rova.account.AccountsApplication for test class com.rova.account.repository.AccountRepositoryTest
+<pre>2023-04-04T15:52:47.907+01:00  INFO 49060 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.rova.account.repository.AccountRepositoryTest]: AccountRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-04-04T15:52:47.916+01:00  INFO 49060 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.rova.account.AccountsApplication for test class com.rova.account.repository.AccountRepositoryTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -113,21 +113,21 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.0.5)
 
-2023-04-03T12:11:32.538+01:00  INFO 44370 --- [    Test worker] c.r.a.repository.AccountRepositoryTest   : Starting AccountRepositoryTest using Java 17.0.6 with PID 44370 (started by macbookpro in /Users/macbookpro/Desktop/springboot/accounts)
-2023-04-03T12:11:32.539+01:00  INFO 44370 --- [    Test worker] c.r.a.repository.AccountRepositoryTest   : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2023-04-03T12:11:32.837+01:00  INFO 44370 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-04-03T12:11:32.852+01:00  INFO 44370 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 3 JPA repository interfaces.
-2023-04-03T12:11:32.952+01:00  INFO 44370 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2023-04-03T12:11:32.953+01:00  INFO 44370 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:mydb user=SA
-2023-04-03T12:11:32.954+01:00  INFO 44370 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2023-04-03T12:11:32.956+01:00  INFO 44370 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-04-03T12:11:32.962+01:00  INFO 44370 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2023-04-03T12:11:33.078+01:00  INFO 44370 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-04-03T12:11:33.078+01:00  INFO 44370 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-04-03T12:11:33.197+01:00  WARN 44370 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-04-03T12:11:33.708+01:00  INFO 44370 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:mydb'
-2023-04-03T12:11:33.723+01:00  INFO 44370 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-04-03T12:11:33.748+01:00  INFO 44370 --- [    Test worker] c.r.a.repository.AccountRepositoryTest   : Started AccountRepositoryTest in 1.234 seconds (process running for 8.956)
+2023-04-04T15:52:47.939+01:00  INFO 49060 --- [    Test worker] c.r.a.repository.AccountRepositoryTest   : Starting AccountRepositoryTest using Java 17.0.6 with PID 49060 (started by macbookpro in /Users/macbookpro/Desktop/springboot/accounts)
+2023-04-04T15:52:47.939+01:00  INFO 49060 --- [    Test worker] c.r.a.repository.AccountRepositoryTest   : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2023-04-04T15:52:48.217+01:00  INFO 49060 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-04T15:52:48.232+01:00  INFO 49060 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 3 JPA repository interfaces.
+2023-04-04T15:52:48.314+01:00  INFO 49060 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-04-04T15:52:48.315+01:00  INFO 49060 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:mydb user=SA
+2023-04-04T15:52:48.315+01:00  INFO 49060 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-04-04T15:52:48.317+01:00  INFO 49060 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-04T15:52:48.322+01:00  INFO 49060 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-04-04T15:52:48.414+01:00  INFO 49060 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-04T15:52:48.415+01:00  INFO 49060 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-04T15:52:48.580+01:00  WARN 49060 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-04T15:52:49.132+01:00  INFO 49060 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:mydb'
+2023-04-04T15:52:49.152+01:00  INFO 49060 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-04-04T15:52:49.186+01:00  INFO 49060 --- [    Test worker] c.r.a.repository.AccountRepositoryTest   : Started AccountRepositoryTest in 1.267 seconds (process running for 10.443)
 </pre>
 </span>
 </div>
@@ -139,7 +139,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.6.1</a> at 3 Apr 2023, 12:11:34</p>
+<a href="http://www.gradle.org">Gradle 7.6.1</a> at 4 Apr 2023, 15:52:49</p>
 </div>
 </div>
 </body>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.rova.account.repository.TransactionRepositoryTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-04-03T11:11:33" hostname="Macbooks-MacBook-Pro.local" time="0.04">
+<testsuite name="com.rova.account.repository.TransactionRepositoryTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-04-04T14:52:49" hostname="Macbooks-MacBook-Pro.local" time="0.034">
   <properties/>
-  <testcase name="testFindAll()" classname="com.rova.account.repository.TransactionRepositoryTest" time="0.011"/>
-  <testcase name="testSaveTransaction()" classname="com.rova.account.repository.TransactionRepositoryTest" time="0.009"/>
+  <testcase name="testFindAll()" classname="com.rova.account.repository.TransactionRepositoryTest" time="0.007"/>
+  <testcase name="testSaveTransaction()" classname="com.rova.account.repository.TransactionRepositoryTest" time="0.008"/>
   <testcase name="testFindById()" classname="com.rova.account.repository.TransactionRepositoryTest" time="0.007"/>
-  <testcase name="testDeleteById()" classname="com.rova.account.repository.TransactionRepositoryTest" time="0.01"/>
-  <system-out><![CDATA[2023-04-03T12:11:33.906+01:00  INFO 44370 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.rova.account.repository.TransactionRepositoryTest]: TransactionRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2023-04-03T12:11:33.908+01:00  INFO 44370 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.rova.account.AccountsApplication for test class com.rova.account.repository.TransactionRepositoryTest
+  <testcase name="testDeleteById()" classname="com.rova.account.repository.TransactionRepositoryTest" time="0.009"/>
+  <system-out><![CDATA[2023-04-04T15:52:49.313+01:00  INFO 49060 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.rova.account.repository.TransactionRepositoryTest]: TransactionRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-04-04T15:52:49.314+01:00  INFO 49060 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.rova.account.AccountsApplication for test class com.rova.account.repository.TransactionRepositoryTest
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
