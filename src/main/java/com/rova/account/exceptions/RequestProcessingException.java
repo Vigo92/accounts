@@ -13,6 +13,6 @@ import lombok.EqualsAndHashCode;
 @Data
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = false)
-public class RequestProcessingException {
+public class RequestProcessingException extends Exception{
     private String message;
 }

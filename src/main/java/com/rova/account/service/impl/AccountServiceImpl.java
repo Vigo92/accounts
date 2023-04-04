@@ -35,6 +35,11 @@ public class AccountServiceImpl implements AccountService, ResponseCodes {
     private final UserRepository userRepository;
     private final AccountRepository accountRepository;
     private final TransactionRepository transactionRepository;
+
+    /*
+    This method creates a current account for an already
+    existing user using his customer ID.
+     */
     @Override
     @Transactional
     public CreateCurrentAccountResponse createCurrentAccount(CreateCurrentAccountRequest createCurrentAccountRequest) throws ResourceNotFoundException {
@@ -50,6 +55,9 @@ public class AccountServiceImpl implements AccountService, ResponseCodes {
                     .amount(createCurrentAccountRequest.initialCredit()).accountNumber(account.getAccountNumber()).build();
             transactionRepository.save(transaction);
         }
-        return CreateCurrentAccountResponse.builder().message(CREATE_ACCOUNT_SUCCESS_MESSAGE).accountNumber(account.getAccountNumber()).responseCode(SUCCESS_CODE).build();
+        CreateCurrentAccountResponse createCurrentAccountResponse =
+         CreateCurrentAccountResponse.builder().message(CREATE_ACCOUNT_SUCCESS_MESSAGE).accountNumber(account.getAccountNumber()).responseCode(SUCCESS_CODE).build();
+        log.info("<<<<<<<<<< Create account response : {}", createCurrentAccountResponse);
+        return createCurrentAccountResponse;
     }
 }

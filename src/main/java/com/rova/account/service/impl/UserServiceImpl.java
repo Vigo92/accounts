@@ -1,6 +1,7 @@
 package com.rova.account.service.impl;
 
 import com.rova.account.exceptions.ResourceNotFoundException;
+import com.rova.account.model.dto.AccountDTO;
 import com.rova.account.model.dto.TransactionDTO;
 import com.rova.account.model.entity.Account;
 import com.rova.account.model.entity.Transaction;
@@ -13,7 +14,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 /**
@@ -28,20 +31,32 @@ import java.util.stream.Collectors;
 public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
+
+    /*
+   This method creates FETCHES a users detail including transactions tied to the user
+    */
     @Override
     public UserDetailsResponse fetchUserAccountDetails(Long id) throws ResourceNotFoundException {
-        log.info("<<<<<<<<<< Get user account details : {}", id);
-        User user  = userRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(""));
+        log.info("<<<<<<<<<< Get user account details for user with id : {}", id);
+        User user  = userRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Invalid user id"));
         Account account = user.getAccount();
-        List<TransactionDTO> transactions = account.getTransactions().stream().map(this::mapUserEntityToDTO).collect(Collectors.toList());
-        return UserDetailsResponse.builder().transactionDTOList(transactions).accountNumber(account.getAccountNumber()).
-                firstName(user.getFirstName()).lastName(user.getLastName()).balance(account.getBalance()).accountNumber(account.getAccountNumber())
+        List<TransactionDTO> transactions = Objects.isNull(account) ? Collections.emptyList() : account.getTransactions().stream().map(this::mapUserEntityToDTO).collect(Collectors.toList());
+        UserDetailsResponse userDetailsResponse = UserDetailsResponse.builder().transactionDTOList(transactions).
+                firstName(user.getFirstName()).lastName(user.getLastName()).
+                accountDTO(mapAccountEntityToDTO(account))
                 .build();
+        log.info("<<<<<<<<<< Get user account details : {}", userDetailsResponse);
+        return userDetailsResponse;
     }
 
     private TransactionDTO mapUserEntityToDTO(Transaction transaction){
         TransactionDTO transactionDTO = new TransactionDTO();
         BeanUtils.copyProperties(transaction,transactionDTO);
         return transactionDTO;
+    }
+
+    private AccountDTO mapAccountEntityToDTO(Account account){
+     return Objects.isNull(account) ? new AccountDTO() : AccountDTO.builder().accountNumber(account.getAccountNumber()).
+             balance(account.getBalance()).build();
     }
 }

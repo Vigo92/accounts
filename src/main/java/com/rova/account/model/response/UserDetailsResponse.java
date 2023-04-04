@@ -1,8 +1,11 @@
 package com.rova.account.model.response;
 
+import com.rova.account.model.dto.AccountDTO;
 import com.rova.account.model.dto.TransactionDTO;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -16,11 +19,12 @@ import java.util.List;
 
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class UserDetailsResponse {
 
     private String firstName;
     private String lastName;
-    private BigDecimal balance;
-    private Long accountNumber;
+    private AccountDTO accountDTO;
     private List<TransactionDTO> transactionDTOList;
 }

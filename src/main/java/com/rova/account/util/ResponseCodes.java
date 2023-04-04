@@ -11,4 +11,8 @@ public interface ResponseCodes {
      String CREATE_ACCOUNT_SUCCESS_MESSAGE = "Account created succesfully";
      String ACCOUNT_NOT_FOUND = "No user found with id %s !";
      String SUCCESS_CODE = "00";
+     String REQUEST_PROCESSING_ERROR_CODE = "99";
+     String RESOURCE_NOT_FOUND = "50";
+
+
 }
