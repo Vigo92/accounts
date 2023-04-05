@@ -31,5 +31,6 @@ http://localhost:8020/swagger-ui/index.html
 5). The application uses the embedded h2 database so you do not need 
 any external database configuration
 
-6). 
+6). On application startup 4 customers have been created with ID ranging 
+from 1 - 4. Use this customer id to test.
 

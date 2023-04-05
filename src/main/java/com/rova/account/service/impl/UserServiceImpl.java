@@ -13,7 +13,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
-
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
@@ -39,11 +38,12 @@ public class UserServiceImpl implements UserService {
     public UserDetailsResponse fetchUserAccountDetails(Long id) throws ResourceNotFoundException {
         log.info("<<<<<<<<<< Get user account details for user with id : {}", id);
         User user  = userRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Invalid user id"));
-        Account account = user.getAccount();
-        List<TransactionDTO> transactions = Objects.isNull(account) ? Collections.emptyList() : account.getTransactions().stream().map(this::mapUserEntityToDTO).collect(Collectors.toList());
-        UserDetailsResponse userDetailsResponse = UserDetailsResponse.builder().transactionDTOList(transactions).
+        List<Account> accounts = user.getAccount();
+        List<AccountDTO> accountDTOS = Objects.isNull(accounts) ? Collections.emptyList() :
+                accounts.stream().map(this::mapAccountEntityToDTO).collect(Collectors.toList());
+        UserDetailsResponse userDetailsResponse = UserDetailsResponse.builder().
                 firstName(user.getFirstName()).lastName(user.getLastName()).
-                accountDTO(mapAccountEntityToDTO(account))
+                accountDTO(accountDTOS)
                 .build();
         log.info("<<<<<<<<<< Get user account details : {}", userDetailsResponse);
         return userDetailsResponse;
@@ -57,6 +57,8 @@ public class UserServiceImpl implements UserService {
 
     private AccountDTO mapAccountEntityToDTO(Account account){
      return Objects.isNull(account) ? new AccountDTO() : AccountDTO.builder().accountNumber(account.getAccountNumber()).
-             balance(account.getBalance()).build();
+             balance(account.getBalance())
+             .transactionDTOList(Objects.isNull(account.getTransactions()) ? Collections.emptyList() :
+                     account.getTransactions().stream().map(this::mapUserEntityToDTO).collect(Collectors.toList())).build();
     }
 }
