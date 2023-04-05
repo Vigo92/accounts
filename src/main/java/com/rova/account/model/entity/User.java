@@ -2,10 +2,10 @@ package com.rova.account.model.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
-import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -24,8 +24,7 @@ import java.util.List;
 public class User extends BaseEntity{
 
     private String firstName;
-
     private String lastName;
-    @OneToOne
-    private Account  account;
+    @OneToMany(mappedBy = "user")
+    private List<Account> account = new ArrayList<>();
 }

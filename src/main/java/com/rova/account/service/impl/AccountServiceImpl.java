@@ -17,7 +17,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.math.BigDecimal;
 
 /**
@@ -45,11 +44,8 @@ public class AccountServiceImpl implements AccountService, ResponseCodes {
     public CreateCurrentAccountResponse createCurrentAccount(CreateCurrentAccountRequest createCurrentAccountRequest) throws ResourceNotFoundException {
         log.info("<<<<<<<<<< Create account request : {}", createCurrentAccountRequest);
         User user = userRepository.findById(createCurrentAccountRequest.customerId()).orElseThrow(() -> new ResourceNotFoundException(String.format(ACCOUNT_NOT_FOUND,createCurrentAccountRequest.customerId())));
-        Account account = Account.builder().balance(createCurrentAccountRequest.initialCredit())
-                .accountNumber(Util.generateNuban()).build();
-        accountRepository.save(account);
-        user.setAccount(account);
-        userRepository.save(user);
+        Account account = accountRepository.save(Account.builder().balance(createCurrentAccountRequest.initialCredit())
+                .accountNumber(Util.generateNuban()).user(user).build());
         if(createCurrentAccountRequest.initialCredit().compareTo(BigDecimal.ZERO) > 0) {
             Transaction transaction = Transaction.builder().transactionType(TransactionType.CREDIT).account(account)
                     .amount(createCurrentAccountRequest.initialCredit()).accountNumber(account.getAccountNumber()).build();

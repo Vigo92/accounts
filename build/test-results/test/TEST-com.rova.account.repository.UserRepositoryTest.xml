@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.rova.account.repository.UserRepositoryTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-04-04T14:52:49" hostname="Macbooks-MacBook-Pro.local" time="0.029">
+<testsuite name="com.rova.account.repository.UserRepositoryTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-04-05T12:38:31" hostname="Macbooks-MacBook-Pro.local" time="0.044">
   <properties/>
-  <testcase name="testFindAll()" classname="com.rova.account.repository.UserRepositoryTest" time="0.008"/>
-  <testcase name="testFindById()" classname="com.rova.account.repository.UserRepositoryTest" time="0.008"/>
-  <testcase name="testDeleteById()" classname="com.rova.account.repository.UserRepositoryTest" time="0.013"/>
-  <system-out><![CDATA[2023-04-04T15:52:49.357+01:00  INFO 49060 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.rova.account.repository.UserRepositoryTest]: UserRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2023-04-04T15:52:49.359+01:00  INFO 49060 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.rova.account.AccountsApplication for test class com.rova.account.repository.UserRepositoryTest
+  <testcase name="testFindAll()" classname="com.rova.account.repository.UserRepositoryTest" time="0.013"/>
+  <testcase name="testFindById()" classname="com.rova.account.repository.UserRepositoryTest" time="0.013"/>
+  <testcase name="testDeleteById()" classname="com.rova.account.repository.UserRepositoryTest" time="0.015"/>
+  <system-out><![CDATA[2023-04-05T13:38:31.120+01:00  INFO 68542 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.rova.account.repository.UserRepositoryTest]: UserRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-04-05T13:38:31.122+01:00  INFO 68542 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.rova.account.AccountsApplication for test class com.rova.account.repository.UserRepositoryTest
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

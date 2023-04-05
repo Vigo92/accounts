@@ -1,9 +1,6 @@
 package com.rova.account.model.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.math.BigDecimal;
@@ -29,6 +26,7 @@ public class Account extends BaseEntity{
     private Long accountNumber;
     @OneToMany(mappedBy = "account")
     private List<Transaction> transactions;
-    @OneToOne
+    @ManyToOne
+    @JoinColumn(name = "account")
     private User user;
 }

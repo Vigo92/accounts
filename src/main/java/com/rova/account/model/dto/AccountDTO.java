@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 /**
  * @author :  Ugochukwu Vigo Obia
@@ -21,4 +22,5 @@ import java.math.BigDecimal;
 public class AccountDTO {
     private BigDecimal balance;
     private Long accountNumber;
+    private List<TransactionDTO> transactionDTOList;
 }
